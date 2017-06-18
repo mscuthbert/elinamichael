@@ -1,13 +1,17 @@
-@import "https://fonts.googleapis.com/css?family=Montserrat:200,500|Quintessential";
+@import "https://fonts.googleapis.com/css?family=Montserrat:300,500|Quintessential";
+.japanese {
+  font-family: "Montserrat", "Gotham", "Verdana", sans-serif;
+  font-size: 20px; }
+
 .orange {
   color: #e9871a; }
 
 BODY {
   text-rendering: optimizeLegibility;
   text-align: center;
-  font-family: "Montserrata", "Gotham", "Verdana", sans-serif;
+  font-family: "Montserrat", "Gotham", "Verdana", sans-serif;
   line-height: 29px;
-  font-weight: 200;
+  font-weight: 300;
   font-size: 22px;
   color: #585858;
   text-transform: uppercase; }
@@ -26,9 +30,12 @@ BODY {
     font-size: 27px; }
   .story .sc {
     text-transform: lowercase;
-    font-family: "Montserrata", "Gotham", "Verdana", sans-serif;
+    font-family: "Montserrat", "Gotham", "Verdana", sans-serif;
     font-variant: small-caps;
     font-weight: 500; }
+  .story .scNoBold {
+    text-transform: lowercase;
+    font-variant: small-caps; }
 
 B {
   font-weight: 500; }
@@ -42,8 +49,9 @@ B {
   margin: 0 auto;
   width: 851px;
   line-height: 36px;
-  text-align: justify;
-  letter-spacing: -0.04em; }
+  text-align: justify; }
+  .invite .compact {
+    letter-spacing: -0.05em; }
   .invite .line {
     text-align: justify; }
     .invite .line:after {

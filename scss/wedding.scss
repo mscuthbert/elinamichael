@@ -1,6 +1,6 @@
-@import 'https://fonts.googleapis.com/css?family=Montserrat:200,500|Quintessential';
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300,500|Quintessential';
 
-$fontDefault: 'Montserrata', 'Gotham', 'Verdana', sans-serif;
+$fontDefault: 'Montserrat', 'Gotham', 'Verdana', sans-serif;
 $fontAccent: 'Quintessential', cursive;
 $fontSerif: 'Garamond';
 $fontSize: 22px;
@@ -14,6 +14,11 @@ $orange: #e9871a;
     margin: 0 auto;
 }
 
+.japanese {
+    font-family: $fontDefault;
+    font-size: ceil($fontSize * 0.9);
+}
+
 .orange {
     color: $orange;
 }
@@ -23,7 +28,7 @@ BODY {
     text-align: center;
     font-family: $fontDefault;
     line-height: ceil($fontSize * 1.3);
-    font-weight: 200;
+    font-weight: 300;
     font-size: $fontSize;
     color: $textColor;
     text-transform: uppercase;
@@ -49,6 +54,10 @@ BODY {
         font-variant: small-caps;
         font-weight: 500;
     }
+    .scNoBold {
+        text-transform: lowercase;
+        font-variant: small-caps;
+    }
 }
 
 B {
@@ -64,7 +73,9 @@ B {
     width: 851px;
     line-height: $lineHeight;
     text-align: justify;
-    letter-spacing: -0.04em;
+    .compact {
+        letter-spacing: -0.05em;
+    }
     .line {
         text-align: justify;
         &:after {
