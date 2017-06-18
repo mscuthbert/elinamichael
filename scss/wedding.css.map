@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAQ,uFAA+E;AAQvF,IAAK;EACD,UAAU,EAAE,MAAM",
+"sources": ["wedding.scss"],
+"names": [],
+"file": "wedding.css"
+}
