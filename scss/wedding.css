@@ -1,5 +1,54 @@
-@import "https://fonts.googleapis.com/css?family=Montserrat:100,400,700|Quintessential";
+@import "https://fonts.googleapis.com/css?family=Montserrat:200,500|Quintessential";
+.orange {
+  color: #e9871a; }
+
 BODY {
-  text-align: center; }
+  text-rendering: optimizeLegibility;
+  text-align: center;
+  font-family: "Montserrata", "Gotham", "Verdana", sans-serif;
+  line-height: 29px;
+  font-weight: 200;
+  font-size: 22px;
+  color: #585858;
+  text-transform: uppercase; }
+
+.story {
+  padding-top: 100px;
+  text-align: left;
+  margin-left: 100px;
+  width: 600px;
+  text-align: justify;
+  text-transform: lowercase;
+  font-family: "Garamond"; }
+  .story h2 {
+    text-transform: none;
+    font-family: "Quintessential", cursive;
+    font-size: 27px; }
+  .story .sc {
+    text-transform: lowercase;
+    font-family: "Montserrata", "Gotham", "Verdana", sans-serif;
+    font-variant: small-caps;
+    font-weight: 500; }
+
+B {
+  font-weight: 500; }
+
+.invite {
+  position: relative;
+  left: -23px;
+  padding-top: 100px;
+  margin-bottom: 100px;
+  display: table;
+  margin: 0 auto;
+  width: 851px;
+  line-height: 36px;
+  text-align: justify;
+  letter-spacing: -0.04em; }
+  .invite .line {
+    text-align: justify; }
+    .invite .line:after {
+      content: "";
+      display: inline-block;
+      width: 100%; }
 
 /*# sourceMappingURL=wedding.css.map */
