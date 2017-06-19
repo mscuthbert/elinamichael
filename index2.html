@@ -5,43 +5,100 @@
     <link rel='stylesheet' href="scss/wedding.css" />
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="scss/bootstrap.min.css" rel="stylesheet">
+
+    <!-- button fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 </head>
-<body>
-    <img src='images/date.png'
-         width="500"
-         style="margin-top: 100px"
-         alt="9/29 2018"
-    /><br />
-    <img src='images/elinaMichael.png'
-         width="500"
-         style="margin-top: 100px"
-         alt="Elina and Michael"
-    />
-    <br />
-    <img src='front_crop.png' width="1000" style="
-        margin-top: 400px;
-    " alt="Elina | Michael"/>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-custom navbar-fixed-top navbar-display" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand page-scroll" href="#page-top">
+                        <i class="fa fa-play-circle"></i>  <span class="light">Elina</span>
+                        <span class="orange">Michael</span>
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                    <ul class="nav navbar-nav">
+                        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                        <li class="hidden">
+                            <a href="#page-top"></a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#invite">Invite</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#about">About</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#events">Events</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+
+        <!-- Intro Header -->
+        <header class="intro">
+            <div class="intro-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div style="max-width: 500px">
+                                <img src='images/date.png' class="dateImage"
+                                     alt="9/29 2018"
+                                /><br />
+                                <img src='images/elinaMichael.png'
+                                     width="500"
+                                     style="margin-top: 100px"
+                                     alt="Elina and Michael"
+                                />                                
+                            </div>
+                            <a href="#invite" class="btn btn-circle page-scroll">
+                                <i class="fa fa-angle-double-down animated"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+
 <br/>
-
-<div class='invite'>
-    <div class='line compact'>
-        <b>Elina G. Hamilton</b> and <b>Michael Scott Cuthbert</b>
-        together with their
-    </div><div class='line'>parents request your company as they
-    celebrate the beginning</div>
-    <div class='line'>of their life together
-    at a <b>Wedding</b> in Cambridge, Massachusetts</div>
-    <div class='line'>
-    at the Eero Saarinen Chapel at M.I.T. on Saturday
-    <b>29 September 2018</b></div>
-    <div>
-        A reception at the
-        Harvard Faculty Club will follow
+<!-- About Section -->
+<section id="invite" class="container content-section invite">
+    <div class="row">
+        <img src='front_crop.png' width="1000" style="
+            margin-top: 400px;
+        " alt="Elina | Michael"/>
+        <div class='line compact'>
+            <b>Elina G. Hamilton</b> and <b>Michael Scott Cuthbert</b>
+            together with their
+        </div><div class='line'>parents request your company as they
+        celebrate the beginning</div>
+        <div class='line'>of their life together
+        at a <b>Wedding</b> in Cambridge, Massachusetts</div>
+        <div class='line'>
+        at the Eero Saarinen Chapel at M.I.T. on Saturday
+        <b>29 September 2018</b></div>
+        <div>
+            A reception at the
+            Harvard Faculty Club will follow
+        </div>
     </div>
-</div>
-
+</section>
 <br />
 <div class="story">
     <h2>Fabula <span class="orange">Nostra</span></h2>
@@ -127,6 +184,10 @@
 
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
+
+<!-- custom navigation js -->
+<script src="js/elinaMichael.js"></script>
+
 
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>

@@ -1,0 +1,47 @@
+
+@mixin transition($x...) {
+    -webkit-transition: $x;
+    -moz-transition: $x;
+    transition: $x;
+}
+
+@mixin fadeTransition {
+    @include transition(background .5s ease-in-out,padding .5s ease-in-out)
+}
+
+
+
+// unused
+@-webkit-keyframes pulse {
+    from {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@-moz-keyframes pulse {
+    from {
+        -moz-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -moz-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    100% {
+        -moz-transform: scale(1);
+        transform: scale(1);
+    }
+}
