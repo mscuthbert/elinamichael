@@ -10,10 +10,35 @@ $textColor: #585858;
 $boldColor: #736d6d;
 $lightColor: lighten($textColor, 30%);
 $orange: #e9871a;
+$lightOrange: lighten($orange, 30%);
 
 @mixin centered {
     display: table;
     margin: 0 auto;
+}
+
+p {
+    margin: 0 0 25px;
+    font-size: 18px;
+    line-height: 1.5;
+    @media(min-width:768px) {
+        margin: 0 0 35px;
+        font-size: 20px;
+        line-height: 1.6;
+    }
+}
+
+a {
+    color: $orange;
+    &:visited {
+        color: $orange;
+    }
+    &:focus {
+        color: $orange;
+    }
+    &:hover {
+        color: $lightOrange;
+    }
 }
 
 .japanese {
@@ -22,7 +47,30 @@ $orange: #e9871a;
 }
 
 .orange {
+    @include transition(color .3s ease-in-out);
     color: $orange;
+}
+
+.top-nav-collapse .orange {
+    color: $lightOrange;
+}
+
+
+.slash {
+    @include transition(border-left .3s ease-in-out);
+    color: $textColor;
+    font-size: ceil($fontSize * 1.1);
+    font-weight: normal !important;
+    position: relative;
+    top: 2px;
+    margin-left: 3px;
+    margin-right: 7px;
+    border-left: 1px solid rgba(200, 200, 200, 0.75);
+}
+
+.top-nav-collapse .slash {
+    border-left: 1px solid rgba(50, 50, 50, 0.75);
+    color: white;
 }
 
 BODY {
@@ -56,16 +104,19 @@ BODY {
         font-family: $fontAccent;
         font-size: ceil($fontSize * 1.2);
     }
-    .sc {
-        text-transform: lowercase;
-        font-family: $fontDefault;
-        font-variant: small-caps;
-        font-weight: 500;
-    }
-    .scNoBold {
-        text-transform: lowercase;
-        font-variant: small-caps;
-    }
+}
+
+.sc {
+    text-transform: lowercase;
+    font-family: $fontDefault;
+    font-variant: small-caps;
+    font-weight: 500;
+}
+
+.scNoBold {
+    text-transform: lowercase;
+    font-family: $fontDefault;
+    font-variant: small-caps;
 }
 
 B {
@@ -78,19 +129,37 @@ B {
     padding-top: 100px;
     margin-bottom: 100px;
     @include centered;
-    width: 851px;
+    width: 651px;
+    font-size: $fontSize;
     line-height: $lineHeight;
     text-align: justify;
     .compact {
         letter-spacing: -0.05em;
     }
     .line {
-        text-align: justify;
-        &:after {
-            content: "";
-            display: inline-block;
-            width: 100%;
+        @media(min-width:768px) {
+            text-align: justify;
+            &:after {
+                content: "";
+                display: inline-block;
+                width: 100%;
+            }
         }
+    }
+    .elinaMichaelNoEt {
+        width: 500px;
+        position: relative;
+        left: -4px;
+        margin-bottom: 10px;
+
+    }
+}
+
+.events {
+    text-align: left;
+    p {
+        text-transform: none;
+        font-family: $fontSerif;
     }
 }
 
@@ -101,16 +170,6 @@ html {
 }
 
 
-p {
-    margin: 0 0 25px;
-    font-size: 18px;
-    line-height: 1.5;
-    @media(min-width:768px) {
-        margin: 0 0 35px;
-        font-size: 20px;
-        line-height: 1.6;
-    }
-}
 
 // a {
 //     color: $textColor;
@@ -133,9 +192,9 @@ p {
     font-weight: 400;
 }
 
-.navbar-display {
-    font-size: 40px;
-}
+// .navbar-display {
+//     font-size: 40px;
+// }
 
 .navbar-custom {
     margin-bottom: 0;
@@ -215,9 +274,9 @@ p {
     .intro-body {
         display: table-cell;
         vertical-align: middle;
-        .brand-heading {
-            font-size: 40px;
-        }
+        // .brand-heading {
+        //     font-size: 40px;
+        // }
         .intro-text {
             font-size: 18px;
         }
@@ -236,41 +295,47 @@ p {
     }
 }
 
+$buttonSize: 50px;
+
 .btn-circle {
-    width: 70px;
-    height: 70px;
-    margin-top: 15px;
-    padding: 7px 16px;
-    border: 2px solid white;
+    width: $buttonSize;
+    height: $buttonSize;
+    padding-top: ceil($buttonSize / 4);
+    color: $lightColor;
+    //padding: 7px 16px;
+    border: 1px solid $textColor !important;
     border-radius: 100% !important;
-    font-size: 40px;
+    font-size: ceil($buttonSize * 0.75) !important;
     background: transparent;
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
     transition: background .3s ease-in-out;
-    &:hover,
     &:focus {
         outline: none;
         color: white;
         background: rgba(white, 0.1);
     }
+    &:hover {
+        animation-name: pulse;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        -webkit-animation-name: pulse;
+        -moz-animation-name: pulse;
+        -webkit-animation-duration: 1.5s;
+        -moz-animation-duration: 1.5s;
+        -webkit-animation-iteration-count: infinite;
+        -moz-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+        -moz-animation-timing-function: linear;
+    }
     i.animated {
+        transition-property: transform;
+        transition-duration: 1s;
         -webkit-transition-property: -webkit-transform;
         -webkit-transition-duration: 1s;
         -moz-transition-property: -moz-transform;
         -moz-transition-duration: 1s;
-    }
-    &:hover {
-        i.animated {
-            -webkit-animation-name: pulse;
-            -moz-animation-name: pulse;
-            -webkit-animation-duration: 1.5s;
-            -moz-animation-duration: 1.5s;
-            -webkit-animation-iteration-count: infinite;
-            -moz-animation-iteration-count: infinite;
-            -webkit-animation-timing-function: linear;
-            -moz-animation-timing-function: linear;
-        }
     }
 }
 
@@ -410,5 +475,43 @@ pre {
 	    a {
 	        color: #e00000 !important;
 	    }
+    }
+}
+
+.tinyAck {
+    font-size: 8px;
+}
+
+@-webkit-keyframes pulse {
+    from {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@-moz-keyframes pulse {
+    from {
+        -moz-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -moz-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    100% {
+        -moz-transform: scale(1);
+        transform: scale(1);
     }
 }

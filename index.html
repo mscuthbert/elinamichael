@@ -1,25 +1,250 @@
 <html>
 <head>
     <title>Elina | Michael</title>
+    <meta charset="utf-8" />
     <link rel='stylesheet' href="scss/wedding.css" />
+
+    <!-- Bootstrap Core CSS -->
+    <link href="scss/bootstrap.min.css" rel="stylesheet">
+
+    <!-- button fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
 </head>
-<body>
-    <img src='back.png'
-         width="500"
-         style="margin-top: 100px"
-         alt="9/29 2018 Elina and Michael"
-    />
-    <br />
-    <img src='front.png' width="1000" style="
-        margin-top: 400px;
-        margin-bottom: 400px;
-    " alt="Elina G. Hamilton and Michael Scott Cuthbert
-    together with their parents request your company as they
-    celebrate the beginning of their life together
-    at a Wedding in Cambridge, Massachusetts
-    at the Eero Saarinen Chapel at M.I.T. on Saturday
-    29 September 2018.  A Reception at the Harvard
-    Faculty Club will follow."/>
-</br/>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-custom navbar-fixed-top navbar-display" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target=".navbar-main-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand page-scroll" href="#page-top">
+                        <i class="fa fa-play-circle"></i>  <span class="light">Elina</span>
+                        <span class="slash"></span>
+                        <span class="orange">Michael</span>
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                    <ul class="nav navbar-nav">
+                        <!-- Hidden li included to remove active class
+                            from about link when scrolled up past about section -->
+                        <li class="hidden">
+                            <a href="#page-top"></a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#invite">Invite</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#events">Events</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#about">About</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+
+        <!-- Intro Header -->
+        <header class="intro">
+            <div class="intro-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div style="max-width: 500px">
+                                <img src='images/date.png' class="dateImage"
+                                     alt="9/29 2018"
+                                /><br />
+                                <img src='images/elinaMichael.png'
+                                     width="500"
+                                     style="margin-top: 100px"
+                                     alt="Elina and Michael"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div style="
+                                max-width: 500px;
+                                margin-top: 50px;
+                            ">
+                                <a href="#invite" class="btn btn-circle page-scroll">
+                                    <i class="fa fa-angle-double-down animated"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+
+<br/>
+<!-- About Section -->
+<section id="invite" class="container content-section invite">
+    <div class="row">
+        <div class="col-md-10">
+            <img src='images/elina_michael_no_et.png'
+                 class="elinaMichaelNoEt"
+                 alt="Elina | Michael"/>
+            <div class='line compact'>
+                <b>Elina G. Hamilton</b> and <b>Michael Scott Cuthbert</b>
+                together with their
+            </div><div class='line'>parents request your company as they
+            celebrate the beginning</div>
+            <div class='line'>of their life together
+            at a <b>Wedding</b> in Cambridge, Massachusetts</div>
+            <div class='line'>
+            at the Eero Saarinen Chapel at M.I.T. on Saturday
+            <b>29 September 2018</b></div>
+            <div>
+                A reception at the
+                Harvard Faculty Club will follow
+            </div>
+        </div>
+    </div>
+</section>
+
+<br />
+
+<!--
+<div class="story">
+    <h2>Fabula <span class="orange">Nostra</span></h2>
+    <p>
+        <span class="sc">Elina G. Hamilton</span> joined the Conservatory in 2014 and
+        is an instructor of music history.
+
+        Hamilton is a musicologist who specializes in the history
+        of music theory in the Middle Ages. Her doctoral research
+        examined the intellectual context of English music theory in the
+        <span class="sc">fourteenth century</span>
+        and has been presented at numerous institutions, including Oxford University,
+        Princeton University, Charles University (Prague), <span class="sc">MIT</span>,
+        and Yale. Her research has been published in leading journals and edited volumes,
+        including Musica Disciplina.
+</p>
+<p>
+        Aside from her interest in music of the distant past, Hamilton is an
+        avid supporter of the performance of new music: she has performed with
+        the London-based vocal ensemble Vocal Constructivists and held the
+        position of festival manager for the <span class="sc">Bangor</span>
+        New Music Festival in Bangor,
+        Wales. Hamilton’s teaching interests span a variety of topics, including
+        the history of music theory, early music history, the piano repertoire
+        of Frédéric Chopin, and music of Bohemia.
+    </p>
+    <h2>私の<span class="orange">ストーリー</span></h2>
+    <p>
+        <span class="sc">Michael Scott Cuthbert</span>, Associate Professor of Music
+        (AB ’98, AM ’01, Ph. D. ’06, Harvard University) is a musicologist who
+        has worked extensively on music of the <span class="sc">fourteenth-century</span>, computational musicology, and minimalism and other music of the past forty years. His publications include seven articles on computational musicology, Ars Nova: French and Italian Music of the Fourteenth Century (with John Nádas), “Generalized Set Analysis and Sub-Saharan African Rhythm,” and “Free Improvisation: John Zorn and the Construction of Jewish Identity through Music.” Cuthbert’s current book project, Ars Mutandi, covers sacred music in Italy during the Black Death and Great Schism.
+    </p>
+</div>
+
+<div class="story">
+    <h2>Fabula <span class="orange">Nostra</span></h2>
+    <p>
+        Schola cantorum bostoniensis in anno domini <span class="scNoBold">MMXIV</span>
+        <span class="sc">Elina G. Hamilton</span>
+        coniuncta fuit malleator et <span class="sc">musicorum</span> historia.
+        Hamilton studia musicorum est qui specialitas in historia musicae
+        doctrina in medio saeculorum. laurea doctorali investigationis eius
+        interrogari de <span class="sc">anglicus</span> in context
+        intellectualis ad musicam aptos esse
+        ad ulciscendi tempora reservabo numerosis in
+        <span class="sc">quartodecimo saeculo</span> et institutorum accipit,
+        inclusis Universitatis Oxoniensis,
+        Universitatis Princetoniensis, Universitatis Carolinae (Praga),
+        MIT, Yalensisque. ducens investigationis eius sunt in journals
+        et editos recensuit libros, inter musica disciplina.
+    </p>
+    <p>
+        declines ab ea interest in musica ex distant praeterita,
+        Hamilton sit an avid conscius de observantia novum musicorum:
+        et facta est per gladiolum, secundum <span class="sc">capella
+        ædificantes vocales</span> ex Londinensi, ibi steti,
+        statum festorum herboso procurator pro festum nova musica bangoriensis.
+        Hamilton de doctrina utilitates locorum spatia variis, comprehendo a
+        historia musicae doctrina, mane historia musicae, in repertoire de piano
+        Friderici Chopin, et musicorum, Bohemie.
+    </p>
+    <h2>私の<span class="orange">ストーリー</span></h2>
+    <p class="japanese">
+        <span class="sc">Michael Scott Cuthbert</span>、
+        (ハーバード大学、<span class="scNoBold">ab'&nbsp;98, am'&nbsp;01, phd&nbsp;'06</span>）
+        は、14世紀の計算音楽学、ミニマリズムなどの音楽を幅広く研究してきた音楽学者です。
+        過去40年間の 彼の出版物には計算音楽学に関する7つの記事、
+        14世紀のフランス語とイタリア語の音楽（ジョン・ナダス）、
+        「一般化集合分析とサハラ・アフリカン・リズム」、
+        「無料即興：ジョン・ゾルーンとユダヤ人の建設 音楽を通してのアイデンティティ」
+        <span class="sc">cuthbert</span>の現在の本プロジェクト、
+        <span class="sc">ars mutandi</span>は、
+        黒人の死と偉大な分裂の間にイタリアで神聖な音楽をカバーしています。
+
+    </p>
+</div>
+-->
+
+<section id="events" class="container content-section events">
+    <div class="row">
+        <div class="col-md-10">
+            <h1>Wedding <span class="orange">Events</span></h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-1">
+            <img src="images/noun_214082_cc.png" alt="wedding rings" width="50"/>
+        </div>
+        <div class="col-md-9">
+            <p>
+                the <span class="sc">wedding</span> will take place at
+                <span class="sc">[tbd]</span> o'clock at the <span class="sc">MIT Chapel</span>
+                at <span class="scNoBold">84</span> massachusetts avenue in cambridge.
+            </p>
+            <br />
+            <p>
+                their commitment to each other will be officiated by
+                <span class="sc"><a href="http://mt-anderson.com/">M. T. Anderson</a></span>.
+                Out of the equal love they
+                feel for so many, the bride and groom will not be having attendants.
+            </p>
+        </div>
+    </div>
+</section>
+
+<br />
+
+<img src='images/map.png' width="100%" style="
+    margin-top: 400px;
+"/>
+
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- custom navigation js -->
+<script src="js/elinaMichael.js"></script>
+
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="js/jquery.easing.min.js"></script>
+
+<div class="tinyAck">
+    Copyright &copy; 2017–18, Elina and Myke (CC-SA-NC). Harvard and MIT images do
+    not imply endorsement from Harvard University or the Massachusetts Institute of Technology.
+    Wedding ring image by Franc from the Noun Project (CC).
+</div>
+
 </body>
 </html>
