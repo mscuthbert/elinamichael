@@ -1,22 +1,22 @@
 @import "https://fonts.googleapis.com/css?family=Montserrat:300,500|Quintessential";
-@media (min-width: 768px) {
-  .showMobile {
-    display: none; } }
-@media (max-width: 768px) {
+@media (max-width: 736px), (max-device-width: 736px) {
   .showMobile {
     display: block; } }
+@media (min-width: 737px), (min-device-width: 737px) {
+  .showMobile {
+    display: none; } }
 
-@media (min-width: 768px) {
-  .showFull {
-    display: block; } }
-@media (max-width: 768px) {
+@media (max-width: 736px), (max-device-width: 736px) {
   .showFull {
     display: none; } }
+@media (min-width: 737px), (min-device-width: 737px) {
+  .showFull {
+    display: block; } }
 
 p {
   margin: 0 0 25px;
   font-size: 18px; }
-  @media (min-width: 768px) {
+  @media (max-width: 736px), (max-device-width: 736px) {
     p {
       margin: 0 0 35px;
       font-size: 20px; } }
@@ -69,7 +69,7 @@ BODY {
   font-size: 22px;
   color: #585858;
   text-transform: uppercase; }
-  @media (min-width: 768px) {
+  @media (min-width: 737px), (min-device-width: 737px) {
     BODY {
       font-size: 17px;
       line-height: 29px; } }
@@ -122,18 +122,6 @@ B {
   color: #707070;
   text-shadow: 0 0 2px rgba(115, 115, 115, 0.5);
   letter-spacing: 0.04em; }
-  @media (min-width: 768px) {
-    .invite {
-      font-size: 21px; } }
-  @media (min-width: 768px) {
-    .invite .line {
-      text-align: justify; }
-      .invite .line:after {
-        content: "";
-        display: inline-block;
-        width: 100%; } }
-  .invite .compact {
-    letter-spacing: -0.01em; }
   .invite .elinaMichaelNoEt {
     width: 500px;
     position: relative;
@@ -190,7 +178,7 @@ html {
       background-color: rgba(255, 255, 255, 0.3); }
       .navbar-custom .nav li.active a:hover {
         color: white; }
-  @media (min-width: 768px) {
+  @media (min-width: 737px), (min-device-width: 737px) {
     .navbar-custom {
       padding: 20px 0;
       border-bottom: none;
@@ -219,7 +207,7 @@ html {
     vertical-align: middle; }
     .intro .intro-body .intro-text {
       font-size: 18px; }
-  @media (min-width: 768px) {
+  @media (min-width: 737px), (min-device-width: 737px) {
     .intro {
       height: 100%;
       padding: 0; }
@@ -227,7 +215,7 @@ html {
         font-size: 90px; }
       .intro .intro-body .intro-text {
         font-size: 26px; } }
-  @media (max-width: 768px) {
+  @media (max-width: 736px), (max-device-width: 736px) {
     .intro {
       padding: 0px 0px; } }
 
@@ -271,7 +259,7 @@ html {
 .content-section {
   padding-top: 100px; }
 
-@media (min-width: 767px) {
+@media (min-width: 737px), (min-device-width: 737px) {
   .content-section {
     padding-top: 250px; }
 
@@ -283,7 +271,7 @@ html {
     margin-top: 250px; } }
 .smaller {
   font-size: 10px; }
-  @media (min-width: 768px) {
+  @media (min-width: 737px), (min-device-width: 737px) {
     .smaller {
       font-size: 14px; } }
 
@@ -323,7 +311,7 @@ ul.banner-social-buttons {
   @media (max-width: 1199px) {
     ul.banner-social-buttons {
       margin-top: 15px; } }
-  @media (max-width: 767px) {
+  @media (min-width: 737px), (min-device-width: 737px) {
     ul.banner-social-buttons li {
       display: block;
       margin-bottom: 20px;
@@ -360,7 +348,7 @@ pre {
   background: #404049;
   border-color: #808084;
   color: #dddddd; }
-  @media (min-width: 768px) {
+  @media (min-width: 737px), (min-device-width: 737px) {
     pre {
       font-size: 18px; } }
 

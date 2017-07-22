@@ -8,3 +8,16 @@
 @mixin fadeTransition {
     @include transition(background .5s ease-in-out,padding .5s ease-in-out)
 }
+
+@mixin phone {
+    @media (max-width: 736px), (max-device-width : 736px) {
+        @content;
+    }
+}
+
+
+@mixin desktop {
+    @media (min-width: 737px), (min-device-width : 737px) {
+        @content;
+    }
+}
