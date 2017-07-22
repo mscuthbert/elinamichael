@@ -115,6 +115,9 @@ BODY {
 .elinaMichaelEt {
     margin-top: 100px;
     width: 500px;
+    @include phone {
+        width: 100%;
+    }
 }
 
 .resizableImage {
