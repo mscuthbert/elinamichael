@@ -18,20 +18,16 @@ $lightOrange: lighten($orange, 30%);
 }
 
 .showMobile {
+    display: none;
     @include phone {
         display: block;
-    }
-    @include desktop {
-        display: none;
     }
 }
 
 .showFull {
+    display: block;
     @include phone {
         display: none;
-    }
-    @include desktop {
-        display: block;
     }
 }
 
@@ -129,7 +125,9 @@ BODY {
     padding-top: 100px;
     text-align: left;
     margin-left: 100px;
-    width: 600px;
+    @include desktop {
+        width: 600px;
+    }
     text-align: justify;
     text-transform: lowercase;
     font-family: $fontSerif;
@@ -167,13 +165,12 @@ B {
     color: #707070;
     text-shadow: 0 0 2px rgba(115, 115, 115, 0.5);
     letter-spacing: 0.04em;
-    .elinaMichaelNoEt {
-        width: 500px;
-        position: relative;
-        left: -4px;
-        margin-bottom: 10px;
-
-    }
+}
+.elinaMichaelFull {
+    @include centered;
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 10px;
 }
 
 .events {

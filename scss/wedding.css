@@ -1,22 +1,20 @@
 @import "https://fonts.googleapis.com/css?family=Montserrat:300,500|Quintessential";
-@media (max-width: 736px), (max-device-width: 736px) {
-  .showMobile {
-    display: block; } }
-@media (min-width: 737px), (min-device-width: 737px) {
-  .showMobile {
-    display: none; } }
+.showMobile {
+  display: none; }
+  @media only screen and (max-width: 768px) {
+    .showMobile {
+      display: block; } }
 
-@media (max-width: 736px), (max-device-width: 736px) {
-  .showFull {
-    display: none; } }
-@media (min-width: 737px), (min-device-width: 737px) {
-  .showFull {
-    display: block; } }
+.showFull {
+  display: block; }
+  @media only screen and (max-width: 768px) {
+    .showFull {
+      display: none; } }
 
 p {
   margin: 0 0 25px;
   font-size: 18px; }
-  @media (max-width: 736px), (max-device-width: 736px) {
+  @media only screen and (max-width: 768px) {
     p {
       margin: 0 0 35px;
       font-size: 20px; } }
@@ -69,7 +67,7 @@ BODY {
   font-size: 22px;
   color: #585858;
   text-transform: uppercase; }
-  @media (min-width: 737px), (min-device-width: 737px) {
+  @media only screen and (min-width: 768px) {
     BODY {
       font-size: 17px;
       line-height: 29px; } }
@@ -82,7 +80,7 @@ BODY {
 .elinaMichaelEt {
   margin-top: 100px;
   width: 500px; }
-  @media (max-width: 736px), (max-device-width: 736px) {
+  @media only screen and (max-width: 768px) {
     .elinaMichaelEt {
       width: 100%; } }
 
@@ -93,10 +91,12 @@ BODY {
   padding-top: 100px;
   text-align: left;
   margin-left: 100px;
-  width: 600px;
   text-align: justify;
   text-transform: lowercase;
   font-family: "Garamond"; }
+  @media only screen and (min-width: 768px) {
+    .story {
+      width: 600px; } }
   .story h2 {
     text-transform: none;
     font-family: "Quintessential", cursive;
@@ -125,11 +125,13 @@ B {
   color: #707070;
   text-shadow: 0 0 2px rgba(115, 115, 115, 0.5);
   letter-spacing: 0.04em; }
-  .invite .elinaMichaelNoEt {
-    width: 500px;
-    position: relative;
-    left: -4px;
-    margin-bottom: 10px; }
+
+.elinaMichaelFull {
+  display: table;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 10px; }
 
 .events {
   text-align: left; }
@@ -181,7 +183,7 @@ html {
       background-color: rgba(255, 255, 255, 0.3); }
       .navbar-custom .nav li.active a:hover {
         color: white; }
-  @media (min-width: 737px), (min-device-width: 737px) {
+  @media only screen and (min-width: 768px) {
     .navbar-custom {
       padding: 20px 0;
       border-bottom: none;
@@ -210,7 +212,7 @@ html {
     vertical-align: middle; }
     .intro .intro-body .intro-text {
       font-size: 18px; }
-  @media (min-width: 737px), (min-device-width: 737px) {
+  @media only screen and (min-width: 768px) {
     .intro {
       height: 100%;
       padding: 0; }
@@ -218,7 +220,7 @@ html {
         font-size: 90px; }
       .intro .intro-body .intro-text {
         font-size: 26px; } }
-  @media (max-width: 736px), (max-device-width: 736px) {
+  @media only screen and (max-width: 768px) {
     .intro {
       padding: 0px 0px; } }
 
@@ -262,7 +264,7 @@ html {
 .content-section {
   padding-top: 100px; }
 
-@media (min-width: 737px), (min-device-width: 737px) {
+@media only screen and (min-width: 768px) {
   .content-section {
     padding-top: 250px; }
 
@@ -274,7 +276,7 @@ html {
     margin-top: 250px; } }
 .smaller {
   font-size: 10px; }
-  @media (min-width: 737px), (min-device-width: 737px) {
+  @media only screen and (min-width: 768px) {
     .smaller {
       font-size: 14px; } }
 
@@ -314,7 +316,7 @@ ul.banner-social-buttons {
   @media (max-width: 1199px) {
     ul.banner-social-buttons {
       margin-top: 15px; } }
-  @media (min-width: 737px), (min-device-width: 737px) {
+  @media only screen and (min-width: 768px) {
     ul.banner-social-buttons li {
       display: block;
       margin-bottom: 20px;
@@ -351,7 +353,7 @@ pre {
   background: #404049;
   border-color: #808084;
   color: #dddddd; }
-  @media (min-width: 737px), (min-device-width: 737px) {
+  @media only screen and (min-width: 768px) {
     pre {
       font-size: 18px; } }
 
