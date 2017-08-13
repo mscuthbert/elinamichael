@@ -46,6 +46,9 @@
                         <li>
                             <a class="page-scroll" href="#about">About</a>
                         </li>
+                        <li>
+                            <a class="page-scroll" href="#respond">Respond</a>
+                        </li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -271,6 +274,84 @@
 
 <div class='mapLocation'>
 </div>
+
+<section id="respond" class="container content-section events">
+    <div class="row">
+        <div class="col-md-10">
+            <h1>Respond <span class="orange">Online</span></h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10">
+            <p>
+                We hope that you will be able to <span class="sc">join us</span>
+                in the festivities.  The <span class="sc">formal invitations</span>
+                which will follow will have additional information about the
+                wedding and will ask give a proper opportunity
+                to reply with food preferences,
+                availability for other events (in Boston or, perchance, in
+                <span class="sc">portland</span> or <span class="sc">san diego</span>),
+                and anything else we should know.
+            </p>
+            <p>
+                If you already know that Boston will be a part of your plans
+                on <span class="sc">september <span class="scNum">29</span>,
+                <span class="scNum">2018</span></span>, or know that
+                you will need to send regrets, it would help our planning to have
+                an early reply here, in our temporary form.
+                <span class="sc">thank you<span class="scNum">!</span></span>
+
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10">
+            <form action="https://formspree.io/cuthbert@mit.edu" method="POST" id="rsvpForm">
+            <p>
+                <label for="form_fullname"><span>Your name</span></label>
+                <input type="text" name="fullname" id="form_fullname"/>
+            </p>
+            <p>
+                <label for="form_fullemail"><span>Email</span></label>
+                <input type="text" name="_replyto" id="form_fullemail"/>
+            </p>
+
+            <p>
+                <label for="form_partnername"><span>Your spouse/partner</span></label>
+                <input type="text" name="partnername" id="form_partnername" />
+            </p>
+            <fieldset>
+              <legend>Reply</legend>
+              <p>
+                  <label for="reply_yes">
+                      <input type="radio" id="reply_yes" name="reply" value="Yes" >
+                      <span class="sc">Yes!</span> We'll see you in Boston!
+                  </label>
+              </p>
+              <p id="numberAttendingP">
+                  <label for="form_numberAttending"><span class="scNoBold">total attending:</span></label>
+                  <input class="attendingNumber" type="number"
+                    name="numberAttending" id="form_numberAttending"
+                    value="0" min="0" max="6"/>
+              </p>
+              <p>
+                  <label for="reply_no">
+                      <input type="radio" id="reply_no" name="reply" value="No">
+                      <span class="sc">Sorry.</span> We'll need to get together some other time.
+                  </label>
+              </p>
+            </fieldset>
+            <p>
+                <button type="submit" name="submitbutton" id="form_submit">Submit RSVP</button>
+            </p>
+
+        </form>
+    </div>
+
+
+</section>
+
+
 
 <!-- jQuery -->
 <script src="js/jquery.js"></script>

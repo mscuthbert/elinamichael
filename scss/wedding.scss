@@ -140,6 +140,10 @@ BODY {
     font-family: $fontDefault;
     font-variant: small-caps;
     font-weight: 500;
+
+    .scNum {
+        font-size: floor($fontSize * 0.6);
+    }
 }
 
 .scNoBold {
@@ -519,10 +523,92 @@ pre {
         color: #ff6060 !important;
     }
     .danger {
-       color: #d00000;
+        color: #d00000;
 	    a {
 	        color: #e00000 !important;
 	    }
+    }
+}
+
+
+#rsvpForm {
+    label {
+        position: relative;
+        span {
+            display: inline-block;
+            width: 220px;
+            text-align: right;
+            @include phone {
+                text-align: left;
+                display: block;
+                margin-left: 10px;
+            }
+        }
+        em {
+            position: absolute;
+            right: 5px;
+            top: 20px;
+        }
+    }
+
+    input, textarea {
+        width: 250px;
+        box-sizing: border-box;
+        border: 1px solid #999;
+        margin-left: 10px;
+        padding-left: 5px;
+        @include phone {
+            clear: left;
+            display: block;
+        }
+    }
+
+    .attendingNumber {
+        width: 50px;
+    }
+    #numberAttendingP {
+        display: none;
+        margin-left: 50px;
+        font-weight: normal;
+    }
+
+    input[type=checkbox], input[type=radio] {
+        width: auto;
+        border: none;
+    }
+
+    input:focus, textarea:focus {
+        border-color: #000;
+    }
+
+    textarea {
+        vertical-align: top;
+        height: 5em;
+        resize: vertical;
+    }
+
+    fieldset {
+        width: 600px;
+        box-sizing: border-box;
+        margin-left: 10px;
+        border: 1px solid #999;
+        border-left: none;
+        legend {
+            position: relative;
+            left: 50px;
+        }
+        label {
+            text-align: left;
+            font-weight: normal;
+            span {
+                display: inline;
+                margin-left: 20px;
+            }
+        }
+    }
+
+    button {
+        margin: 20px 0 0 124px;
     }
 }
 

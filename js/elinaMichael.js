@@ -12,6 +12,28 @@ function collapseNavbar() {
 $(window).scroll(collapseNavbar);
 $(document).ready(collapseNavbar);
 
+$(document).ready(function() {
+    $('input[type=radio][name=reply]').on('change', function() {
+         var $attendingNumber = $('#form_numberAttending');
+         switch($(this).val()) {
+             case 'Yes':
+                 $('#numberAttendingP').css('display', 'block');
+                 var spouseFilled = $('#form_partnername').val();
+                 if (spouseFilled.length > 0) {
+                     $attendingNumber.val(2);
+                 } else {
+                     $attendingNumber.val(1);
+                 }
+                 break;
+             case 'No':
+                 $('#numberAttendingP').css('display', 'none');
+                 $attendingNumber.val(0);
+                 break;
+         }
+    });
+});
+
+
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
     $('a.page-scroll').bind('click', function(event) {

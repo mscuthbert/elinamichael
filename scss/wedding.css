@@ -101,6 +101,8 @@ BODY {
   font-family: "Montserrat", "Gotham", "Verdana", sans-serif;
   font-variant: small-caps;
   font-weight: 500; }
+  .sc .scNum {
+    font-size: 13px; }
 
 .scNoBold {
   text-transform: lowercase;
@@ -386,6 +388,64 @@ pre {
     color: #d00000; }
     .hiddenPre .danger a {
       color: #e00000 !important; }
+
+#rsvpForm label {
+  position: relative; }
+  #rsvpForm label span {
+    display: inline-block;
+    width: 220px;
+    text-align: right; }
+    @media only screen and (max-width: 768px) {
+      #rsvpForm label span {
+        text-align: left;
+        display: block;
+        margin-left: 10px; } }
+  #rsvpForm label em {
+    position: absolute;
+    right: 5px;
+    top: 20px; }
+#rsvpForm input, #rsvpForm textarea {
+  width: 250px;
+  box-sizing: border-box;
+  border: 1px solid #999;
+  margin-left: 10px;
+  padding-left: 5px; }
+  @media only screen and (max-width: 768px) {
+    #rsvpForm input, #rsvpForm textarea {
+      clear: left;
+      display: block; } }
+#rsvpForm .attendingNumber {
+  width: 50px; }
+#rsvpForm #numberAttendingP {
+  display: none;
+  margin-left: 50px;
+  font-weight: normal; }
+#rsvpForm input[type=checkbox], #rsvpForm input[type=radio] {
+  width: auto;
+  border: none; }
+#rsvpForm input:focus, #rsvpForm textarea:focus {
+  border-color: #000; }
+#rsvpForm textarea {
+  vertical-align: top;
+  height: 5em;
+  resize: vertical; }
+#rsvpForm fieldset {
+  width: 600px;
+  box-sizing: border-box;
+  margin-left: 10px;
+  border: 1px solid #999;
+  border-left: none; }
+  #rsvpForm fieldset legend {
+    position: relative;
+    left: 50px; }
+  #rsvpForm fieldset label {
+    text-align: left;
+    font-weight: normal; }
+    #rsvpForm fieldset label span {
+      display: inline;
+      margin-left: 20px; }
+#rsvpForm button {
+  margin: 20px 0 0 124px; }
 
 .tinyAck {
   font-size: 8px; }
