@@ -423,6 +423,10 @@ pre {
 #rsvpForm input[type=checkbox], #rsvpForm input[type=radio] {
   width: auto;
   border: none; }
+  @media only screen and (max-width: 768px) {
+    #rsvpForm input[type=checkbox], #rsvpForm input[type=radio] {
+      clear: left;
+      display: inline; } }
 #rsvpForm input:focus, #rsvpForm textarea:focus {
   border-color: #000; }
 #rsvpForm textarea {
@@ -435,6 +439,9 @@ pre {
   margin-left: 10px;
   border: 1px solid #999;
   border-left: none; }
+  @media only screen and (max-width: 768px) {
+    #rsvpForm fieldset {
+      width: auto; } }
   #rsvpForm fieldset legend {
     position: relative;
     left: 50px; }
@@ -445,7 +452,8 @@ pre {
       display: inline;
       margin-left: 20px; }
 #rsvpForm button {
-  margin: 20px 0 0 124px; }
+  margin: 20px 0 0 124px;
+  text-align: left; }
 
 .tinyAck {
   font-size: 8px; }

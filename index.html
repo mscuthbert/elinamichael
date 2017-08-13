@@ -43,9 +43,11 @@
                         <li>
                             <a class="page-scroll" href="#events">Events</a>
                         </li>
+                        <!--
                         <li>
                             <a class="page-scroll" href="#about">About</a>
                         </li>
+                        -->
                         <li>
                             <a class="page-scroll" href="#respond">Respond</a>
                         </li>
@@ -307,6 +309,9 @@
     <div class="row">
         <div class="col-md-10">
             <form action="https://formspree.io/cuthbert@mit.edu" method="POST" id="rsvpForm">
+            <input type="hidden" name="_cc" value="elinahamilton@gmail.com" />
+            <input type="hidden" name="_subject" value="Wedding RSVP!" />
+            <input type="hidden" name="_next" value="//www.elinamichael.xyz/thankyou.html" />
             <p>
                 <label for="form_fullname"><span>Your name</span></label>
                 <input type="text" name="fullname" id="form_fullname"/>
@@ -319,6 +324,10 @@
             <p>
                 <label for="form_partnername"><span>Your spouse/partner</span></label>
                 <input type="text" name="partnername" id="form_partnername" />
+            </p>
+            <p>
+                <label for="form_textComment"><span>Comments</span></label>
+                <textarea name="comments" id="form_textComment" placeholder="Anything else we should know?"></textarea>
             </p>
             <fieldset>
               <legend>Reply</legend>
@@ -342,9 +351,14 @@
               </p>
             </fieldset>
             <p>
-                <button type="submit" name="submitbutton" id="form_submit">Submit RSVP</button>
+                <button type="submit" name="submitbutton" id="form_submit">Submit RSVP</button><br />
             </p>
+            <p style="max-width: 600px">
+                <span class="scNoBold">After clicking submit, our form system will ask you
+                    to click a button
+                    to show you intended to submit. Sorry about that!</span>
 
+            </p>
         </form>
     </div>
 

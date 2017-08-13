@@ -575,6 +575,10 @@ pre {
     input[type=checkbox], input[type=radio] {
         width: auto;
         border: none;
+        @include phone {
+            clear: left;
+            display: inline;
+        }
     }
 
     input:focus, textarea:focus {
@@ -593,6 +597,10 @@ pre {
         margin-left: 10px;
         border: 1px solid #999;
         border-left: none;
+        @include phone {
+            width: auto;
+        }
+
         legend {
             position: relative;
             left: 50px;
@@ -609,6 +617,7 @@ pre {
 
     button {
         margin: 20px 0 0 124px;
+        text-align: left;
     }
 }
 
