@@ -1,5 +1,5 @@
 @import 'https://fonts.googleapis.com/css?family=Montserrat:300,500|Quintessential';
-@import "mixins";
+@import 'mixins';
 
 $fontDefault: 'Montserrat', 'Gotham', 'Verdana', sans-serif;
 $fontAccent: 'Quintessential', cursive;
@@ -30,7 +30,6 @@ $lightOrange: lighten($orange, 30%);
         display: none;
     }
 }
-
 
 p {
     margin: 0 0 25px;
@@ -66,7 +65,7 @@ a {
 }
 
 .slash {
-    @include transition(border-left .3s ease-in-out);
+    @include transition(border-left 0.3s ease-in-out);
     color: $textColor;
     font-size: ceil($fontSize * 1.1);
     font-weight: normal !important;
@@ -82,8 +81,7 @@ a {
     color: white;
 }
 
-
-BODY {
+body {
     text-rendering: optimizeLegibility;
     text-align: center;
     font-family: $fontDefault;
@@ -96,6 +94,14 @@ BODY {
         font-size: ceil($fontSize * 0.75);
         line-height: ceil($fontSize * 1.3);
     }
+}
+label {
+    font-family: $fontDefault;
+    line-height: $fontSize;
+    font-size: $fontSize;
+    color: $orange;
+    text-transform: lowercase;
+    font-variant: small-caps;
 }
 
 .dateImage {
@@ -115,7 +121,6 @@ BODY {
 .resizableImage {
     width: 100%;
 }
-
 
 .story {
     padding-top: 100px;
@@ -150,9 +155,12 @@ BODY {
     text-transform: lowercase;
     font-family: $fontDefault;
     font-variant: small-caps;
+    .scNum {
+        font-size: floor($fontSize * 0.6);
+    }
 }
 
-B {
+b {
     font-weight: 500;
 }
 
@@ -181,13 +189,10 @@ B {
     }
 }
 
-
 html {
     width: 100%;
     height: 100%;
 }
-
-
 
 // a {
 //     color: $textColor;
@@ -248,7 +253,7 @@ html {
     .nav {
         li {
             a {
-                @include transition(background .3s ease-in-out);
+                @include transition(background 0.3s ease-in-out);
                 &:hover {
                     color: rgba(white, 0.8);
                     outline: none;
@@ -286,7 +291,7 @@ html {
 }
 
 .nav .orange {
-    @include transition(color .3s ease-in-out);
+    @include transition(color 0.3s ease-in-out);
     @include phone {
         color: $lightOrange;
     }
@@ -295,8 +300,6 @@ html {
 .top-nav-collapse .orange {
     color: $lightOrange;
 }
-
-
 
 .intro {
     display: table;
@@ -333,7 +336,6 @@ html {
     @include phone {
         padding: 0px 0px;
     }
-
 }
 
 $buttonSize: 50px;
@@ -348,9 +350,9 @@ $buttonSize: 50px;
     border-radius: 100% !important;
     font-size: ceil($buttonSize * 0.75) !important;
     background: transparent;
-    -webkit-transition: background .3s ease-in-out;
-    -moz-transition: background .3s ease-in-out;
-    transition: background .3s ease-in-out;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out;
     &:focus {
         outline: none;
         color: white;
@@ -380,7 +382,6 @@ $buttonSize: 50px;
     }
 }
 
-
 .content-section {
     padding-top: 100px;
     @include desktop {
@@ -408,12 +409,10 @@ $buttonSize: 50px;
     @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px) {
         background-image: url('/images/maps/map@2x.png');
     }
-
 }
 
-
 .smaller {
-	font-size: 10px;
+    font-size: 10px;
     @include desktop {
         font-size: 14px;
     }
@@ -421,11 +420,11 @@ $buttonSize: 50px;
 
 .btn {
     text-transform: uppercase;
-    font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 400;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     border-radius: 0;
 }
 
@@ -440,27 +439,25 @@ $buttonSize: 50px;
         color: $lightColor;
         background-color: $textColor;
     }
-
 }
 
 .btn-default.active {
-        border: 1px solid $textColor;
-        outline: none;
-        color: $lightColor;
-        background-color: $textColor;
+    border: 1px solid $textColor;
+    outline: none;
+    color: $lightColor;
+    background-color: $textColor;
 }
 
-
 .btn-default.active:focus {
-        border: 1px solid $textColor;
-        outline: none;
-        color: $lightColor;
-        background-color: $textColor;
+    border: 1px solid $textColor;
+    outline: none;
+    color: $lightColor;
+    background-color: $textColor;
 }
 
 ul.banner-social-buttons {
     margin-top: 0;
-    @media(max-width:1199px) {
+    @media (max-width: 1199px) {
         margin-top: 15px;
     }
     @include desktop {
@@ -511,9 +508,9 @@ pre {
     @include desktop {
         font-size: 18px;
     }
-	background: #404049;
-	border-color: #808084;
-	color: #dddddd;
+    background: #404049;
+    border-color: #808084;
+    color: #dddddd;
 }
 
 .hiddenPre {
@@ -524,12 +521,11 @@ pre {
     }
     .danger {
         color: #d00000;
-	    a {
-	        color: #e00000 !important;
-	    }
+        a {
+            color: #e00000 !important;
+        }
     }
 }
-
 
 #rsvpForm {
     label {
@@ -551,7 +547,8 @@ pre {
         }
     }
 
-    input, textarea {
+    input,
+    textarea {
         width: 250px;
         box-sizing: border-box;
         border: 1px solid #999;
@@ -572,7 +569,8 @@ pre {
         font-weight: normal;
     }
 
-    input[type=checkbox], input[type=radio] {
+    input[type='checkbox'],
+    input[type='radio'] {
         width: auto;
         border: none;
         @include phone {
@@ -581,7 +579,8 @@ pre {
         }
     }
 
-    input:focus, textarea:focus {
+    input:focus,
+    textarea:focus {
         border-color: #000;
     }
 
