@@ -181,13 +181,19 @@ b {
     margin-bottom: 10px;
 }
 
-.events {
+.notShouting {
     text-align: left;
     p {
         text-transform: none;
         font-family: $fontSerif;
     }
 }
+
+.lc {
+    text-transform: none;
+    font-family: $fontSerif;
+}
+
 
 html {
     width: 100%;

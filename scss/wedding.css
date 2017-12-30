@@ -139,11 +139,15 @@ b {
   max-width: 1000px;
   margin-bottom: 10px; }
 
-.events {
+.notShouting {
   text-align: left; }
-  .events p {
+  .notShouting p {
     text-transform: none;
     font-family: "Garamond"; }
+
+.lc {
+  text-transform: none;
+  font-family: "Garamond"; }
 
 html {
   width: 100%;
