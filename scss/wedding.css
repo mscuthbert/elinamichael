@@ -360,6 +360,15 @@ ul.banner-social-buttons {
       ul.banner-social-buttons li:last-child {
         margin-bottom: 0; } }
 
+.pt-2 {
+  padding-top: 20px; }
+
+.ml-2 {
+  margin-left: 20px; }
+
+.ml-7 {
+  margin-left: 70px !important; }
+
 footer {
   padding: 50px 0; }
   footer p {
@@ -432,7 +441,7 @@ pre {
       display: block; } }
 #rsvpForm .attendingNumber {
   width: 50px; }
-#rsvpForm #numberAttendingP {
+#rsvpForm .yesOnly {
   display: none;
   margin-left: 50px;
   font-weight: normal; }

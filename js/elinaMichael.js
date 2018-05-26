@@ -12,27 +12,44 @@ function collapseNavbar() {
 $(window).scroll(collapseNavbar);
 $(document).ready(collapseNavbar);
 
+function updateAttendingValues() {
+    var $attendingNumber = $('#form_numberAttending');
+    var numAttending = parseInt($attendingNumber.val());
+    for (var guestNum = 2; guestNum < 6; guestNum++) {
+        var thisSelector = '#guest_' + guestNum + '_choices';
+        var $thisP = $(thisSelector);
+        if (guestNum > numAttending) {
+          $thisP.css('display', 'none');
+        } else {
+          $thisP.css('display', 'block');
+        }
+    }
+}
+
+
+
 $(document).ready(function() {
+    var $attendingNumber = $('#form_numberAttending');
     $('input[type=radio][name=reply]').on('change', function() {
-         var $attendingNumber = $('#form_numberAttending');
          switch($(this).val()) {
              case 'Yes':
-                 $('#numberAttendingP').css('display', 'block');
-                 var spouseFilled = $('#form_partnername').val();
-                 if (spouseFilled.length > 0) {
-                     $attendingNumber.val(2);
-                 } else {
+                 $('.yesOnly').css('display', 'block');
+                 if ($attendingNumber.val() == 0) {
                      $attendingNumber.val(1);
                  }
+                 updateAttendingValues();
                  break;
              case 'No':
-                 $('#numberAttendingP').css('display', 'none');
+                 $('.yesOnly').css('display', 'none');
                  $attendingNumber.val(0);
                  break;
          }
     });
-});
+    $attendingNumber.on('change', updateAttendingValues);
+    $attendingNumber.on('keypress', updateAttendingValues);
+    $attendingNumber.on('mouseup', updateAttendingValues);
 
+});
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
@@ -50,4 +67,14 @@ $('.navbar-collapse ul li a').click(function() {
   if ($(this).attr('class') != 'dropdown-toggle active' && $(this).attr('class') != 'dropdown-toggle') {
     $('.navbar-toggle:visible').click();
   }
+});
+
+// prevent submit on enter
+$(document).ready(function() {
+  $(window).keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
 });

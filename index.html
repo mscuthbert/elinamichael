@@ -311,7 +311,7 @@
             <p>
                 the <span class="sc">wedding</span> will take place at
                 <span class="sc">two</span> o'clock at the <span class="sc">MIT Chapel</span>
-                at <span class="scNoBold">84</span> massachusetts avenue in cambridge.
+                at <span class="scNoBold">48</span> massachusetts avenue in cambridge.
             </p>
             <br />
             <p>
@@ -347,9 +347,9 @@
         </div>
         <div class="col-md-11">
             <p>
-                details on <span class="sc">pre-wedding</span> and
+                for details on <span class="sc">pre-wedding</span> and
                 <span class="sc">post-reception</span> events for <span class="sc">out of town</span>
-                guests will follow.
+                guests please contact us.
             </p>
             <p>
                 the <span class="scNoBold">MIT</span> campus is located
@@ -425,22 +425,8 @@
         <div class="col-md-10">
             <p>
                 We hope that you will be able to <span class="sc">join us</span>
-                in the festivities.  The <span class="sc">formal invitations</span>
-                which will follow will have additional information about the
-                wedding and will give a proper opportunity
-                to reply with food preferences,
-                availability for other events (in Boston or, perchance, in
-                <span class="sc">portland</span> or <span class="sc">san diego</span>),
-                and anything else we should know.
-            </p>
-            <p>
-                If you already know that Boston will be a part of your plans
-                on <span class="sc">september <span class="scNum">29</span>,
-                <span class="scNum">2018</span></span>, or know that
-                you will need to send regrets, it would help our planning to have
-                an early reply here, in our temporary form.
-                <span class="sc">thank you<span class="scNum">!</span></span>
-
+                in the festivities.  The Favor of your Response is requested by
+                <span class="sc">august 1</span>.
             </p>
         </div>
     </div>
@@ -456,35 +442,113 @@
             </p>
             <p>
                 <label for="form_fullemail"><span>Email</span></label>
-                <input type="text" name="_replyto" id="form_fullemail"/>
+                <input type="email" name="_replyto" id="form_fullemail"/>
             </p>
 
             <p>
-                <label for="form_partnername"><span>Your spouse or partner</span></label>
-                <input type="text" name="partnername" id="form_partnername" />
-            </p>
-            <p>
                 <label for="form_textComment"><span>Comments</span></label>
-                <textarea name="comments" id="form_textComment" placeholder="Anything else we should know? (Children attending, special needs, etc.)"></textarea>
+                <textarea name="comments" id="form_textComment" placeholder="Anything else we should know? (comments, special needs, etc.)"></textarea>
             </p>
             <fieldset>
               <legend>Reply</legend>
               <p>
                   <label for="reply_yes">
                       <input type="radio" id="reply_yes" name="reply" value="Yes" >
-                      <span class="sc">Yes!</span> We'll see you in Boston!
+                      Joyfully Accepts
                   </label>
               </p>
-              <p id="numberAttendingP">
+              <p class="yesOnly" id="numberAttendingP">
                   <label for="form_numberAttending"><span class="scNoBold">total attending:</span></label>
                   <input class="attendingNumber" type="number"
                     name="numberAttending" id="form_numberAttending"
-                    value="0" min="0" max="6"/>
+                    value="0" min="0" max="5"/>
               </p>
+              <p class="yesOnly ml-7">
+                <span class="sc">If from out of town,</span> please let us know if you will attend
+              </p>
+              <p class="yesOnly ml-7">
+                <label for="fridayNight">Friday Night</label><input name="fridayNight" id="fridayNight" type="checkBox"/>
+                &nbsp; &nbsp; &nbsp;
+                <label for="sunday">Sunday</label><input name="sunday" id="sunday" type="checkBox"/><br/>
+              </p>
+
+              <p class="yesOnly">
+                <label>
+                  <span class="sc">your food choice:</span>
+                </label><br/>
+                                &nbsp; &nbsp; &nbsp; &nbsp;
+                  <input name="guest1_food" type="radio" id="guest1_food" value="char" />
+                  Arctic Char
+                  <input name="guest1_food" type="radio" id="guest1_food" value="rib" />
+                  Short Rib
+                  <input name="guest1_food" type="radio" id="guest1_food" value="veg" />
+                  Vegetarian
+              </p>
+              <p class="yesOnly pt-2" id="guest_2_choices">
+                  <label for="form_guest2_name"><span class="scBold">Your main guest</span></label>
+                  <input type="text" name="form_guest2_name" id="form_guest2_name" />
+                  <br/>
+                  &nbsp; &nbsp; &nbsp; &nbsp; Food:
+                  <input name="guest2_food" type="radio" id="guest2_food" value="char" />
+                  Arctic Char
+                  <input name="guest2_food" type="radio" id="guest2_food" value="rib" />
+                  Short Rib
+                  <input name="guest2_food" type="radio" id="guest2_food" value="veg" />
+                  Vegetarian
+              </p>
+              <p class="yesOnly pt-2" id="guest_3_choices">
+                  <label for="form_guest3_name"><span class="scBold">Guest 3 Name</span></label>
+                  <input type="text" name="form_guest3_name" id="form_guest3_name" />
+                  <br/>
+                  &nbsp; &nbsp; &nbsp; &nbsp; Food:
+                  <input name="guest3_food" type="radio" id="guest3_food" value="char" />
+                  Arctic Char
+                  <input name="guest3_food" type="radio" id="guest3_food" value="rib" />
+                  Short Rib
+                  <br/>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+                  <input name="guest3_food" type="radio" id="guest3_food" value="veg" />
+                  Vegetarian
+                  <input name="guest3_food" type="radio" id="guest3_food" value="child" />
+                  Children's
+              </p>
+              <p class="yesOnly pt-2" id="guest_4_choices">
+                  <label for="form_guest4_name"><span class="scBold">Guest 4 Name</span></label>
+                  <input type="text" name="form_guest4_name" id="form_guest4_name" />
+                  <br/>
+                  &nbsp; &nbsp; &nbsp; &nbsp; Food:
+                  <input name="guest4_food" type="radio" id="guest4_food" value="char" />
+                  Arctic Char
+                  <input name="guest4_food" type="radio" id="guest4_food" value="rib" />
+                  Short Rib
+                  <br/>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+                  <input name="guest4_food" type="radio" id="guest4_food" value="veg" />
+                  Vegetarian
+                  <input name="guest4_food" type="radio" id="guest4_food" value="child" />
+                  Children's
+              </p>
+              <p class="yesOnly pt-2" id="guest_5_choices">
+                  <label for="form_guest5_name"><span class="scBold">Guest 5 Name</span></label>
+                  <input type="text" name="form_guest5_name" id="form_guest5_name" />
+                  <br/>
+                  &nbsp; &nbsp; &nbsp; &nbsp; Food:
+                  <input name="guest5_food" type="radio" id="guest5_food" value="char" />
+                  Arctic Char
+                  <input name="guest5_food" type="radio" id="guest5_food" value="rib" />
+                  Short Rib
+                  <br/>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+                  <input name="guest5_food" type="radio" id="guest5_food" value="veg" />
+                  Vegetarian
+                  <input name="guest5_food" type="radio" id="guest5_food" value="child" />
+                  Children's
+              </p>
+
               <p>
                   <label for="reply_no">
                       <input type="radio" id="reply_no" name="reply" value="No">
-                      <span class="sc">Sorry.</span> We'll need to get together some other time.
+                      Regretfully Declines
                   </label>
               </p>
             </fieldset>

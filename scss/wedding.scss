@@ -477,6 +477,16 @@ ul.banner-social-buttons {
         }
     }
 }
+.pt-2 {
+  padding-top: 20px;
+}
+.ml-2 {
+  margin-left: 20px;
+}
+.ml-7 {
+  margin-left: 70px !important;
+}
+
 
 footer {
     padding: 50px 0;
@@ -569,7 +579,7 @@ pre {
     .attendingNumber {
         width: 50px;
     }
-    #numberAttendingP {
+    .yesOnly {
         display: none;
         margin-left: 50px;
         font-weight: normal;
