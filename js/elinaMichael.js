@@ -9,8 +9,19 @@ function collapseNavbar() {
     }
 }
 
+function scrollIfNotScrolled() {
+    var currentScrollPos = $('body').scrollTop();
+    console.log('scroll if not scrolled', currentScrollPos);
+    if (currentScrollPos < 100) {
+        $('#scrollDownLink').click();
+    }
+}
+
 $(window).scroll(collapseNavbar);
 $(document).ready(collapseNavbar);
+$(document).ready(function() {
+    setTimeout(scrollIfNotScrolled, 2000);
+})
 
 function updateAttendingValues() {
     var $attendingNumber = $('#form_numberAttending');
