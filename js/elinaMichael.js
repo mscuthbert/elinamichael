@@ -89,3 +89,10 @@ $(document).ready(function() {
     }
   });
 });
+
+$(document).ready(function() {
+  $('#rsvpForm').on('submit', function(event) {
+    event.preventDefault();
+    $('#rsvpClosed').css('display', 'block');
+  });
+});
